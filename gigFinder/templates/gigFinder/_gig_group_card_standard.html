@@ -2,19 +2,18 @@
 <div class="card mb-3">
     <div class="card-header">
         <h5 class="card-title">{{ gig.name }}</h5>
-        {% if gig.important %}
-        <span class="badge bg-warning">Important</span>
-        {% endif %}
     </div>
     <div class="card-body">
         <p class="card-text">{{ gig.description }}</p>
         <h6>Events:</h6>
         {% for event in gig.events %}
         <div class="border-bottom mb-2 pb-2">
+            <span class="badge bg-secondary me-2">{{ event.date|date:"F j, Y" }}</span>
             <strong>{{ event.name }}</strong><br>
-            <small>{{ event.location }}</small><br>
-            <small class="text-muted">{{ event.date }}</small>
+            <small><a href="https://www.google.com/maps/search/?api=1&query={{ event.address|urlencode }}"
+                    target="_blank" class="text-decoration-none">{{ event.location }}</a></small>
         </div>
         {% endfor %}
     </div>
 </div>
+

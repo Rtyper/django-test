@@ -1,0 +1,5 @@
+{% if gig.important %}
+{% include "gigFinder/_gig_group_card_important.html" with gig=gig %}
+{% else %}
+{% include "gigFinder/_gig_group_card_standard.html" with gig=gig %}
+{% endif %}

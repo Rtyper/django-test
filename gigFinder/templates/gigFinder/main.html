@@ -1,4 +1,5 @@
 {% load django_bootstrap5 %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main</title>
     {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'gigFinder/style.css' %}">
 </head>
 
 <body>
@@ -35,7 +37,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-8 col-md-10">
                 {% for gig in gigs %}
-                {% include "gigFinder/_gig_card.html" with gig=gig %}
+                {% include "gigFinder/_gig_group_card.html" with gig=gig %}
                 {% endfor %}
             </div>
         </div>

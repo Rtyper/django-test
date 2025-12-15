@@ -1,0 +1,20 @@
+{% load django_bootstrap5 %}
+<div class="card mb-3">
+    <div class="card-header header-important">
+        <h4 class="card-title mb-0">
+            <span class="me-2">⭐</span>{{ gig.name }}
+        </h4>
+    </div>
+    <div class="card-body">
+        <p class="card-text">{{ gig.description }}</p>
+        <h6>Events:</h6>
+        {% for event in gig.events %}
+        <div class="border-bottom mb-2 pb-2">
+            <span class="badge bg-secondary me-2">{{ event.date|date:"F j, Y" }}</span>
+            <strong>{{ event.name }}</strong><br>
+            <small><a href="https://www.google.com/maps/search/?api=1&query={{ event.address|urlencode }}"
+                    target="_blank" class="text-decoration-none">{{ event.location }}</a></small>
+        </div>
+        {% endfor %}
+    </div>
+</div>
