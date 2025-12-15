@@ -1,0 +1,5 @@
+---
+alwaysApply: true
+---
+
+- This application uses the Django framework, always prioritise using existing Django features over writing new code from scratch
