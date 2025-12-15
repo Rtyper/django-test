@@ -1,12 +1,47 @@
+{% load django_bootstrap5 %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main</title>
+    {% bootstrap_css %}
 </head>
-<body>
-    <h1>Main</h1>
-</body>
-</html>
 
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid justify-content-center">
+            <span class="navbar-brand mb-0 h1">GigFinder</span>
+        </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <form class="d-flex" role="search">
+                    <input class="form-control form-control-lg" type="search" placeholder="Find an artist..."
+                        aria-label="Search">
+                    <button class="btn btn-outline-success btn-lg ms-2" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gig List -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                {% for gig in gigs %}
+                {% include "gigFinder/_gig_card.html" with gig=gig %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    {% bootstrap_javascript %}
+</body>
+
+</html>

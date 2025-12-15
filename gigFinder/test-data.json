@@ -1,0 +1,108 @@
+[
+    {
+        "name": "Pendulum Live National Bowl Show",
+        "description": "A large scale outdoor headline live show by Pendulum featuring full live production.",
+        "important": false,
+        "events": [
+            {
+                "name": "Pendulum Live at the National Bowl",
+                "location": "Milton Keynes National Bowl, Milton Keynes, England",
+                "address": "National Bowl, Watling Street, Milton Keynes MK5 8AA, United Kingdom",
+                "date": "2025-08-09"
+            }
+        ]
+    },
+    {
+        "name": "UK Headline Tour Inertia Tour",
+        "description": "UK headline tour celebrating the Inertia album with full live band performances across major cities.",
+        "important": true,
+        "events": [
+            {
+                "name": "Pendulum Inertia Tour Edinburgh",
+                "location": "Edinburgh Corn Exchange, Edinburgh, Scotland",
+                "address": "Edinburgh Corn Exchange, 11 New Market Road, Edinburgh EH14 1RJ, United Kingdom",
+                "date": "2025-11-01"
+            },
+            {
+                "name": "Pendulum Inertia Tour Bristol",
+                "location": "The Prospect Building, Bristol, England",
+                "address": "The Prospect Building, 45 Feeder Road, Bristol BS2 0SE, United Kingdom",
+                "date": "2025-11-03"
+            },
+            {
+                "name": "Pendulum Inertia Tour Wolverhampton",
+                "location": "Wolverhampton Civic Hall, Wolverhampton, England",
+                "address": "Civic Hall, North Street, Wolverhampton WV1 1RQ, United Kingdom",
+                "date": "2025-11-04"
+            },
+            {
+                "name": "Pendulum Inertia Tour London",
+                "location": "O2 Academy Brixton, London, England",
+                "address": "O2 Academy Brixton, 211 Stockwell Road, London SW9 9SL, United Kingdom",
+                "date": "2025-11-06"
+            },
+            {
+                "name": "Pendulum Inertia Tour London Extra Date",
+                "location": "O2 Academy Brixton, London, England",
+                "address": "O2 Academy Brixton, 211 Stockwell Road, London SW9 9SL, United Kingdom",
+                "date": "2025-11-07"
+            },
+            {
+                "name": "Pendulum Inertia Tour Manchester",
+                "location": "Depot Mayfield, Manchester, England",
+                "address": "Depot Mayfield, 11 Baring Street, Manchester M1 2PY, United Kingdom",
+                "date": "2025-11-09"
+            }
+        ]
+    },
+    {
+        "name": "UK Festival Appearances 2026",
+        "description": "Pendulum performances as part of major UK music festivals.",
+        "important": false,
+        "events": [
+            {
+                "name": "Forbidden Forest Festival",
+                "location": "Belvoir Castle, Grantham, England",
+                "address": "Belvoir Castle, Belvoir, Grantham NG32 1PE, United Kingdom",
+                "date": "2026-06-04"
+            },
+            {
+                "name": "Download Festival",
+                "location": "Donington Park, Derby, England",
+                "address": "Donington Park, Castle Donington, Derby DE74 2RP, United Kingdom",
+                "date": "2026-06-10"
+            },
+            {
+                "name": "Port Eliot Festival",
+                "location": "Port Eliot Estate, Saltash, England",
+                "address": "Port Eliot Estate, St Germans, Saltash PL12 5ND, United Kingdom",
+                "date": "2026-07-18"
+            }
+        ]
+    },
+    {
+        "name": "Pendulum DJ Set UK Shows",
+        "description": "Club style DJ performances by Pendulum rather than full live band shows.",
+        "important": false,
+        "events": [
+            {
+                "name": "Pendulum DJ Set Newcastle",
+                "location": "Newcastle upon Tyne, England",
+                "address": "Newcastle upon Tyne, Tyne and Wear, United Kingdom",
+                "date": "2025-12-06"
+            },
+            {
+                "name": "Pendulum DJ Set Southampton",
+                "location": "EngineRooms, Southampton, England",
+                "address": "EngineRooms, 3 West Quay Road, Southampton SO15 1GZ, United Kingdom",
+                "date": "2025-12-13"
+            },
+            {
+                "name": "Pendulum DJ Set Southsea",
+                "location": "South Parade Pier, Southsea, England",
+                "address": "South Parade Pier, South Parade, Southsea PO4 0SW, United Kingdom",
+                "date": "2026-03-28"
+            }
+        ]
+    }
+]
