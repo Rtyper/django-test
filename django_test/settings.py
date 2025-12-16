@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure-e-0gfzs8c=&yuhccrluw-zrv1&q!wucheqqdc6f!$8w6(p^9&n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.awsapprunner.com']
+# Allow localhost in development, restrict to AppRunner domain in production
+if DEBUG:
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.awsapprunner.com']
+else:
+    ALLOWED_HOSTS = ['.awsapprunner.com']
 
 
 # Application definition
@@ -49,8 +53,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+
+# Add WhiteNoise middleware only in production
+if not DEBUG:
+    MIDDLEWARE.append('whitenoise.middleware.WhiteNoiseMiddleware')
 
 ROOT_URLCONF = 'django_test.urls'
 
@@ -120,11 +127,22 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-STORAGES = {
-    'default': {
-        'BACKEND': 'django.core.files.storage.FileSystemStorage',
-    },
-    'staticfiles': {
-        'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
-    },
-}
+# Use WhiteNoise in production, default storage in development
+if DEBUG:
+    STORAGES = {
+        'default': {
+            'BACKEND': 'django.core.files.storage.FileSystemStorage',
+        },
+        'staticfiles': {
+            'BACKEND': 'django.contrib.staticfiles.storage.StaticFilesStorage',
+        },
+    }
+else:
+    STORAGES = {
+        'default': {
+            'BACKEND': 'django.core.files.storage.FileSystemStorage',
+        },
+        'staticfiles': {
+            'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
+        },
+    }
