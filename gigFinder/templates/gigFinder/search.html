@@ -6,13 +6,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GigFinder - Find your next gig</title>
+    <title>GigFinder - Search Results</title>
     {% bootstrap_css %}
     <link rel="stylesheet" href="{% static 'gigFinder/style.css' %}">
 </head>
 
 <body>
     {% include "gigFinder/_header.html" %}
+
+    <!-- Gig List -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                {% for gig in gigs %}
+                {% include "gigFinder/_gig_group_card.html" with gig=gig %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 
     {% bootstrap_javascript %}
 </body>

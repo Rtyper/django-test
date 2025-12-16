@@ -1,0 +1,21 @@
+{% load django_bootstrap5 %}
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid justify-content-center">
+        <span class="navbar-brand mb-0 h1">GigFinder</span>
+    </div>
+</nav>
+
+<!-- Search Bar -->
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <form class="d-flex" role="search" method="get" action="{% url 'search' %}">
+                <input class="form-control form-control-lg" type="search" name="q" placeholder="Find an artist..."
+                    aria-label="Search" value="{{ request.GET.q|default:'' }}">
+                <button class="btn btn-outline-success btn-lg ms-2" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</div>
+

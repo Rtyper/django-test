@@ -3,6 +3,50 @@ from datetime import date, datetime
 from typing import List
 
 
+# JSON Schema for GigGroup and Event structures
+GIG_GROUP_JSON_SCHEMA = {
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "name": {
+                "type": "string"
+            },
+            "description": {
+                "type": "string"
+            },
+            "important": {
+                "type": "boolean"
+            },
+            "events": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "location": {
+                            "type": "string"
+                        },
+                        "address": {
+                            "type": "string"
+                        },
+                        "date": {
+                            "type": "string",
+                            "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                            "description": "Date in YYYY-MM-DD format"
+                        }
+                    },
+                    "required": ["name", "location", "address", "date"]
+                }
+            }
+        },
+        "required": ["name", "description", "important", "events"]
+    }
+}
+
+
 @dataclass
 class Event:
     """Represents a single event/gig."""
